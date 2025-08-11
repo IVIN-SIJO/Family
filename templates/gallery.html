@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head > 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Denk+One&family=Gloock&family=Purple+Purse&display=swap" onload="this.rel='stylesheet'">
+  <noscript>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Denk+One&family=Gloock&family=Purple+Purse&display=swap">
+  </noscript>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}" />
+  <link rel="icon" type="image/ico" sizes="48x48" href="{{ url_for('static', filename='images/logo/favicon.ico')}}" />
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/logo/favicon-32x32.png')}}" />
+
+  <title>FAMILY</title>
+ <style>
+  .images-container{
+  width:100%;
+  height:auto;
+  position:relative;
+  margin:0;
+ }
+.gallery-landing-img{
+  display: flex;
+  flex-wrap: wrap;
+  position:absolute;
+  justify-content: center;
+  object-fit: contain;
+  align-items: center;
+  width:100%;
+  height:100%;
+  margin-top:0rem;
+  box-sizing: border-box;
+}
+ 
+ </style>
+
+</head>
+<body data-page="gallery">
+  <header id="header">
+    <div id="title">
+      <h1 id="web_name">FAMILY</h1>
+      <div id="nav_bar">
+        <a href="{{ url_for('home') }}" class="home"> HOME</a>
+        <a href="{{ url_for('gallery') }}" class="gallery"> GALLERY</a>
+        <a href="{{url_for('tree')}}" class="tree"> FAMILY-TREE</a>
+        <a href="{{url_for('contacts') }}" class="contacts"> CONTACTS</a>
+      </div>
+    </div>
+  </header>
+  <main id="gallery-main">
+     <div> <h2 class="txtbtwnhandg"> GALLERY </h2></div>
+     <div class="images-container"><!-- GALLERY ABOUT IN LANDING PAGE -->
+       <svg class="svg" viewBox="0 0 2048 2043" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+         <!-- Background image -->
+         <image class="gallery-landing-img" href="{{url_for('static', filename='images/background/gallery-intro4.webp')}}" width="100%" height="100%"/>
+         <!-- MOLEKUDIYIL -->
+         <polygon class="hover-shape molekudiyil"  points="670,0 662,250 900,480 1140,230 1140,0"  />
+         <!-- Bottom Triangle -->
+         <polygon class="hover-shape paul" points="1087,1433 606,1915 731,2042 1443,2042 1570,1914" />
+
+         <!-- SHIJO MATTAM -->
+         <polygon class="hover-shape shijo" points="1700,0 1900,0 2046,144 2045,271  1706,612 1390,305    " />
+
+         <!-- JOSHY MATTAM -->
+         <polygon class="hover-shape joshy" points="468,1600 680,1820 468,2040 256,1820" />
+
+         <!-- VETTAM  -->
+         <polygon class="hover-shape vettam" points="1627,982 2045,987 2044,1507 1629,1507  " />
+
+         <!-- KOCHANICHUVATTIL -->
+         <polygon class="hover-shape kochani" points="0,579 0,719 112,829 588,342 406,164" />
+        </svg>
+        <div id="image-popup">
+         <img id="popup-img" src=""/>
+        </div>
+    </div>
+  </main>
+
+
+
+  <script src="{{ url_for('static', filename='index.js')}}"></script>
+</body>
+</html>

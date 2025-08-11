@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Purple+Purse&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}" />
+  <link rel="icon" href="static/images/favicon.ico" />
+  <link rel="icon" href="static/images/favicon-32x32.png" />
+  <title>FAMILY</title>
+</head>
+<body>
+  <header id="header">
+    <div id="title">
+      <h1 id="web_name">FAMILY</h1>
+      <div id="nav_bar">
+        <a href="{{url_for('home')}}" class="home"> HOME</a>
+        <a href="{{url_for('gallery')}}" class="gallery"> GALLERY</a>
+        <a href="{{url_for('tree')}}" class="tree"> FAMILY-TREE</a>
+        <a href="{{url_for('contacts')}}" class="contacts"> CONTACTS</a>
+      </div>
+    </div>
+  </header>
+
+
+  <main id="landing1">
+    <div class="intro"> CONTACTS </div>
+  </main>
+
+  <script src="static/index.js"></script>
+</body>
+</html>
